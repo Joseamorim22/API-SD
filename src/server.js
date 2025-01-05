@@ -9,11 +9,11 @@ app.use(cors());
 app.use(bodyParser.json());
 
 // Servir arquivos estáticos (como index.html, style.css e app.js)
-app.use(express.static(path.join(__dirname, '../frontend')));  // Ajuste o caminho conforme necessário
+app.use(express.static(path.join(__dirname, '../frontend')));
 
-// Importando as rotas de items
-const itemsRoutes = require('./routes/items');  // Rota para os itens
-app.use('/items', itemsRoutes);  // Usar a rota '/items' definida em 'items.js'
+// Importar as rotas de items
+const itemsRoutes = require('./routes/items');
+app.use('/items', itemsRoutes);
 
 // Iniciar servidor
 const port = 5000;
@@ -21,4 +21,4 @@ app.listen(port, () => {
     console.log(`Servidor rodando na porta ${port}`);
 });
 
-module.exports = app; // Expondo a aplicação para testes (caso necessário)
+module.exports = app;
