@@ -14,7 +14,7 @@ router.get('/', (req, res) => {
 // POST - Criar um novo item
 router.post('/', (req, res) => {
     const newItem = req.body;
-    newItem.id = items.length + 1; // Definindo um ID simples
+    newItem.id = items.length + 1;
     items.push(newItem);
     res.status(201).json(newItem);
 });
@@ -33,7 +33,7 @@ router.put('/:id', (req, res) => {
     res.json(items[index]);
 });
 
-// DELETE - Deletar um item
+// DELETE - Apagar um item
 router.delete('/:id', (req, res) => {
     const { id } = req.params;
     const index = items.findIndex(item => item.id === parseInt(id));
