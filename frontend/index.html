@@ -11,30 +11,32 @@
 <body>
     <h1>Interface da API de Itens</h1>
 
-    <!-- Área para exibir os itens -->
+    <!-- exibir os itens -->
     <div id="itemsList">
         <h2>Itens</h2>
         <ul id="itemListUl"></ul>
     </div>
 
-    <!-- Formulário para adicionar um novo item -->
+    <!-- adicionar um novo item -->
     <div id="addItemForm">
         <h2>Adicionar Item</h2>
         <input type="text" id="itemName" placeholder="Nome do Item">
         <input type="number" id="itemPrice" placeholder="Preço">
+        <input type="text" id="itemCategory" placeholder="Categoria">
         <button onclick="addItem()">Adicionar Item</button>
     </div>
 
-    <!-- Formulário para atualizar um item -->
+    <!-- atualizar um item -->
     <div id="updateItemForm">
         <h2>Atualizar Item</h2>
         <input type="number" id="updateItemId" placeholder="ID do Item">
         <input type="text" id="updateItemName" placeholder="Novo Nome">
         <input type="number" id="updateItemPrice" placeholder="Novo Preço">
+        <input type="text" id="updateItemCategory" placeholder="Nova Categoria">
         <button onclick="updateItem()">Atualizar Item</button>
     </div>
 
-    <!-- Formulário para remover um item -->
+    <!-- remover um item -->
     <div id="removeItemForm">
         <h2>Remover Item</h2>
         <input type="number" id="removeItemId" placeholder="ID do Item">
