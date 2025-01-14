@@ -1,9 +1,16 @@
 {
+  "name": "api-sd",
+  "version": "1.0.0",
+  "main": "src/app.js",
   "dependencies": {
     "@prisma/client": "^6.2.1",
     "cors": "^2.8.5",
     "express": "^4.21.2",
     "prisma": "^6.2.1",
-    "swagger-ui-express": "^5.0.1"
+    "swagger-ui-express": "^5.0.1",
+    "uuid": "^11.0.5"
+  },
+  "scripts": {
+    "dev": "node src/app.js"
   }
 }

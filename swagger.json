@@ -3,7 +3,7 @@
     "info": {
         "title": "API de Utilizadores",
         "version": "1.0.0",
-        "description": "API para gerenciar utilizadores"
+        "description": "API para gerir utilizadores"
     },
     "paths": {
         "/api/users": {
@@ -39,7 +39,9 @@
                         }
                     }
                 }
-            },
+            }
+        },
+        "/api/users/add": {
             "post": {
                 "summary": "Criar um novo utilizador",
                 "operationId": "createUser",
@@ -72,19 +74,16 @@
                                 "schema": {
                                     "type": "object",
                                     "properties": {
-                                        "id": {
-                                            "type": "string"
-                                        },
-                                        "nome": {
-                                            "type": "string"
-                                        },
-                                        "email": {
+                                        "message": {
                                             "type": "string"
                                         }
                                     }
                                 }
                             }
                         }
+                    },
+                    "500": {
+                        "description": "Erro ao criar utilizador"
                     }
                 }
             }
