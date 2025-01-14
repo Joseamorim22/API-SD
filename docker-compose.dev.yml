@@ -4,8 +4,8 @@ services:
     build: .
     ports:
       - "5000:5000"
-    environment:
-      - DATABASE_URL=mysql://root:senha@mysql:3306/API
+    env_file:
+      - .env # Isto vai garantir que as variáveis de ambiente sejam lidas do .env
     depends_on:
       - mysql
     restart: always
@@ -15,7 +15,7 @@ services:
   mysql:
     image: mysql:8
     environment:
-      MYSQL_ROOT_PASSWORD: senha
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD} # Utiliza a variável do .env
       MYSQL_DATABASE: API
     ports:
       - "3306:3306"
