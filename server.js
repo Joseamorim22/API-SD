@@ -14,8 +14,10 @@ app.use(express.json());
 
 // Rotas
 app.use('/api/users', usersRoutes);
-app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
+app.use('/api/docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
+
+app.use
 // Iniciar o servidor
 const PORT = 5000;
 app.listen(PORT, () => {
